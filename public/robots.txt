@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://vite-react-chakra-starter.sznm.dev
+Host: https://vite-react-tailwind-starter.sznm.dev
