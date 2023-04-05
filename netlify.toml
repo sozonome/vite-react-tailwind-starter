@@ -4,4 +4,4 @@
   status=200
 
 [build.environment]
-  NODE_VERSION=18
+  NODE_VERSION="18"
