@@ -1,19 +1,23 @@
-import Footer from "./Footer";
-import Meta from "./Meta";
+import type { ReactNode } from 'react';
+
+import { ThemeProvider } from '@/lib/components/theme-provider';
+
+import Footer from './Footer';
+import Header from './Header';
 
 type LayoutProps = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <>
-      <Meta />
-      <div className="font-sans prose">
-        <main>{children}</main>
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <div className="flex min-h-screen flex-col">
+        <Header />
+        <main className="wrapper">{children}</main>
         <Footer />
       </div>
-    </>
+    </ThemeProvider>
   );
 };
 

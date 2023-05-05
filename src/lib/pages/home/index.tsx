@@ -1,12 +1,10 @@
-import CTASection from "./components/CTASection";
-import SomeImage from "./components/SomeImage";
-import SomeText from "./components/SomeText";
+import CTASection from './components/CTASection';
+import SomeText from './components/SomeText';
 
 const Home = () => {
   return (
-    <div>
+    <div className="flex min-h-[60vh] flex-col items-center justify-center gap-8 text-center">
       <SomeText />
-      <SomeImage />
       <CTASection />
     </div>
   );

@@ -1,9 +1,9 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const Page404 = () => {
   const navigate = useNavigate();
 
-  const handleBackToHome = () => navigate("/");
+  const handleBackToHome = () => navigate('/');
 
   return (
     <div>
