@@ -1,26 +1,30 @@
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
+import { Button } from '@/lib/components/ui/button';
 
 const Page404 = () => {
-  const navigate = useNavigate();
-
-  const handleBackToHome = () => navigate('/');
-
   return (
-    <div>
-      <h1>Page not Found</h1>
-
-      <div>
+    <div className="grid md:flex md:min-h-[60vh] md:items-center gap-4">
+      <div className="text-center">
         <img width={400} src="/assets/404 Error-rafiki.svg" alt="404" />
-        <a href="https://stories.freepik.com/web">
-          Illustration by Freepik Stories
-        </a>
+        <Button variant="link" asChild>
+          <a href="https://stories.freepik.com/web" className="text-xs">
+            Illustration by Freepik Stories
+          </a>
+        </Button>
       </div>
 
-      <div>
-        <p>It&apos;s Okay!</p>
-        <button type="button" onClick={handleBackToHome}>
-          Let&apos;s Head Back
-        </button>
+      <div className="text-center md:text-start">
+        <h1 className="text-3xl">Page not Found</h1>
+
+        <div className="grid gap-2">
+          <p>It&apos;s Okay!</p>
+          <div>
+            <Button asChild>
+              <Link to="/">Let&apos;s Head Back</Link>
+            </Button>
+          </div>
+        </div>
       </div>
     </div>
   );
