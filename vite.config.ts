@@ -1,9 +1,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import react from '@vitejs/plugin-react-swc';
 import million from 'million/compiler';
-import tsConfigPaths from 'vite-tsconfig-paths';
 import { defineConfig } from 'vite';
 import checker from 'vite-plugin-checker';
+import tsConfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
 export default defineConfig({
