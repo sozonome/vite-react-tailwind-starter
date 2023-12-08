@@ -1,8 +1,54 @@
-'use client';
+import type { ReactNode } from 'react';
+import React from 'react';
 
-import { ThemeProvider as NextThemesProvider } from 'next-themes';
-import type { ThemeProviderProps } from 'next-themes/dist/types';
-
-export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
-  return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
+interface IThemeContext {
+  theme: string;
+  toggleTheme: () => void;
 }
+
+export const ThemeContext = React.createContext<IThemeContext>({
+  theme: 'light',
+  toggleTheme: () => console.error('no theme provider'),
+} as IThemeContext);
+
+interface ThemeProviderProps {
+  children: ReactNode;
+}
+
+export const ThemeProvider = ({ children }: ThemeProviderProps) => {
+  const [theme, setTheme] = React.useState<string>('light');
+
+  const toggleTheme = React.useCallback(() => {
+    const updatedTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(updatedTheme);
+    window.localStorage.setItem('theme', updatedTheme);
+  }, [theme]);
+
+  React.useEffect(() => {
+    const localTheme = window.localStorage.getItem('theme');
+    if (localTheme) {
+      setTheme(localTheme);
+    }
+  }, []);
+
+  React.useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [theme]);
+
+  const providerValue = React.useMemo(
+    () => ({ theme, toggleTheme }),
+    [theme, toggleTheme]
+  );
+
+  return (
+    <ThemeContext.Provider value={providerValue}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
+
+export const useTheme = () => React.useContext<IThemeContext>(ThemeContext);
