@@ -1,5 +1,3 @@
-import { Button } from '@/lib/components/ui/button';
-
 const repoName = 'sozonome/vite-react-tailwind-starter';
 
 const CTASection = () => {
@@ -34,28 +32,22 @@ const CTASection = () => {
       </div>
 
       <div className="flex items-center gap-2">
-        <Button
-          asChild
-          className="bg-gradient-to-br from-gray-100 to-green-200 font-semibold text-green-700 hover:from-gray-200 hover:to-green-200 hover:text-green-800"
+        <a
+          className="p-2 rounded-lg bg-gradient-to-br from-gray-100 to-green-200 font-semibold text-green-700 hover:from-gray-200 hover:to-green-200 hover:text-green-800"
+          href={`https://github.com/${repoName}/generate`}
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <a
-            href={`https://github.com/${repoName}/generate`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Use This Template
-          </a>
-        </Button>
-        <Button asChild variant="link">
-          <a
-            className=" p-2 rounded-3xl text-xs font-semibold"
-            href={`https://github.com/${repoName}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Repository
-          </a>
-        </Button>
+          Use This Template
+        </a>
+        <a
+          className="p-2 rounded-3xl text-xs font-semibold"
+          href={`https://github.com/${repoName}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Repository
+        </a>
       </div>
     </div>
   );
