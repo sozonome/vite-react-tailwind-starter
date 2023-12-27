@@ -33,7 +33,7 @@ const CTASection = () => {
 
       <div className="flex items-center gap-2">
         <a
-          className="p-2 rounded-lg bg-gradient-to-br from-gray-100 to-green-200 font-semibold text-green-700 hover:from-gray-200 hover:to-green-200 hover:text-green-800"
+          className="rounded-lg bg-gradient-to-br from-gray-100 to-green-200 p-2 font-semibold text-green-700 hover:from-gray-200 hover:to-green-200 hover:text-green-800"
           href={`https://github.com/${repoName}/generate`}
           target="_blank"
           rel="noopener noreferrer"
@@ -41,7 +41,7 @@ const CTASection = () => {
           Use This Template
         </a>
         <a
-          className="p-2 rounded-3xl text-xs font-semibold"
+          className="rounded-3xl p-2 text-xs font-semibold"
           href={`https://github.com/${repoName}`}
           target="_blank"
           rel="noopener noreferrer"

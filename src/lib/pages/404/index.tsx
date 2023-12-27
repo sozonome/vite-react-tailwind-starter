@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const Page404 = () => {
   return (
-    <div className="grid md:flex md:min-h-[60vh] md:items-center gap-4">
+    <div className="grid gap-4 md:flex md:min-h-[60vh] md:items-center">
       <div className="text-center">
         <img width={400} src="/assets/404 Error-rafiki.svg" alt="404" />
         <a href="https://stories.freepik.com/web" className="text-xs">
