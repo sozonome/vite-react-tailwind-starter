@@ -1,17 +1,19 @@
-'use client';
-
-import { Moon, Sun } from 'lucide-react';
+import { Classic } from '@theme-toggles/react';
+import '@theme-toggles/react/css/Classic.css';
 
 import { useTheme } from '@/lib/components/theme-provider';
 
 export function ThemeToggle() {
-  const { toggleTheme } = useTheme();
+  const { toggleTheme, theme } = useTheme();
 
   return (
-    <button type="button" onClick={toggleTheme}>
-      <Sun className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-      <Moon className="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-      <span className="sr-only">Toggle theme</span>
-    </button>
+    <Classic
+      toggle={toggleTheme}
+      toggled={theme === 'light'}
+      placeholder=""
+      className="text-3xl"
+      onPointerEnterCapture={() => {}}
+      onPointerLeaveCapture={() => {}}
+    />
   );
 }
