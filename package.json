@@ -23,28 +23,28 @@
     "@fontsource/plus-jakarta-sans": "^5.0.20",
     "@theme-toggles/react": "^4.1.0",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.376.0",
-    "million": "3.0.6",
+    "lucide-react": "^0.379.0",
+    "million": "3.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
-    "react-router-dom": "^6.23.0",
+    "react-router-dom": "^6.23.1",
     "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^19.2.2",
     "@tailwindcss/typography": "^0.5.13",
-    "@types/node": "^20.12.7",
-    "@types/react": "18.2.75",
+    "@types/node": "^20.12.12",
+    "@types/react": "18.3.2",
     "@types/react-dom": "^18.3.0",
     "@types/react-helmet": "^6.1.11",
-    "@vitejs/plugin-react-swc": "^3.6.0",
+    "@vitejs/plugin-react-swc": "^3.7.0",
     "autoprefixer": "^10.4.19",
     "commitlint": "^19.3.0",
     "eslint": "^8.57.0",
     "eslint-config-sznm": "^2.0.3",
     "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
+    "lint-staged": "^15.2.4",
     "postcss": "^8.4.38",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.14",
@@ -52,13 +52,14 @@
     "standard-version": "^9.5.0",
     "tailwindcss": "^3.4.3",
     "typescript": "5.4.5",
-    "vite": "^5.2.10",
+    "vite": "^5.2.11",
     "vite-plugin-checker": "^0.6.4",
-    "vite-plugin-pwa": "^0.19.8",
+    "vite-plugin-pwa": "^0.20.0",
     "vite-tsconfig-paths": "^4.3.2"
   },
   "engines": {
-    "node": ">=16.x.x",
-    "pnpm": ">=8"
-  }
+    "node": ">=18.20.x",
+    "pnpm": ">=9"
+  },
+  "packageManager": "pnpm@9.1.1"
 }
