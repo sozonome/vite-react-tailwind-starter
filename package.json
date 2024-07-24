@@ -11,7 +11,7 @@
     "lint": "eslint src --cache",
     "lint:fix": "eslint src --fix && pnpm format",
     "type-check": "tsc",
-    "turbo": "pnpm dlx turbo@2.0.1",
+    "turbo": "pnpm dlx turbo@2.0.9",
     "test": "vitest run",
     "test:ui": "vitest --ui --coverage",
     "test:coverage": "vitest --coverage run",
