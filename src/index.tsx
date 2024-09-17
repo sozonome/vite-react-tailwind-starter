@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom/client';
 import '@fontsource/plus-jakarta-sans/latin.css';
 import '@/lib/styles/globals.css';
 
-import App from './App';
+import App from './app';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

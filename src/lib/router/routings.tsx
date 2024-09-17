@@ -11,9 +11,9 @@
 import { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import RequireAuth from '@/lib/components/auth/RequireAuth';
 import Page404 from '@/lib/pages/404';
 
+import RequireAuth from './require-auth';
 import { routes, privateRoutes } from './routes';
 
 const Routings = () => {

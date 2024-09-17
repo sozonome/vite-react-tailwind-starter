@@ -1,5 +1,5 @@
-import CTASection from './components/CTASection';
-import SomeText from './components/SomeText';
+import CTASection from './components/cta-section';
+import SomeText from './components/some-text';
 
 const Home = () => {
   return (
