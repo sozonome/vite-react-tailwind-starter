@@ -4,26 +4,34 @@
   "private": true,
   "author": "sozonome",
   "type": "module",
+  "engines": {
+    "node": ">=20.14.x",
+    "pnpm": ">=9"
+  },
+  "packageManager": "pnpm@9.1.1",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "lint": "eslint src --cache",
-    "lint:fix": "eslint src --fix && pnpm format",
-    "type-check": "tsc",
-    "turbo": "pnpm dlx turbo@2.0.9",
+    "biome:check": "biome check",
+    "biome:fix": "pnpm biome:check --write",
+    "biome:ci": "biome ci",
+    "type:check": "tsc",
+    "turbo": "pnpm dlx turbo@2.1.2",
     "test": "vitest run",
     "test:ui": "vitest --ui --coverage",
     "test:coverage": "vitest --coverage run",
-    "check:turbo": "pnpm turbo lint type-check test",
-    "format": "prettier --write src",
+    "check:turbo": "pnpm turbo biome:check type:check test",
     "up-interactive": "pnpm up -i",
     "up-latest": "pnpm up-interactive -L",
-    "release": "standard-version",
+    "release": "cross-env HUSKY=0 commit-and-tag-version",
     "push-release": "git push --follow-tags origin main",
-    "prepare": "husky"
+    "prepare": "husky",
+    "knip": "knip"
   },
   "dependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/types": "^19.5.0",
     "@fontsource/plus-jakarta-sans": "^5.1.0",
     "@theme-toggles/react": "^4.1.0",
     "clsx": "^2.1.1",
@@ -36,6 +44,7 @@
     "tailwind-merge": "^2.5.2"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.9.1",
     "@commitlint/config-conventional": "^19.5.0",
     "@tailwindcss/typography": "^0.5.15",
     "@types/node": "^22.5.5",
@@ -46,16 +55,13 @@
     "@vitest/coverage-v8": "^2.1.1",
     "@vitest/ui": "^2.1.1",
     "autoprefixer": "^10.4.20",
-    "commitlint": "^19.5.0",
-    "eslint": "^8.57.0",
-    "eslint-config-sznm": "^2.0.3",
+    "commit-and-tag-version": "^12.4.4",
+    "cross-env": "^7.0.3",
     "husky": "^9.1.6",
+    "knip": "^5.30.2",
     "lint-staged": "^15.2.10",
     "postcss": "^8.4.47",
-    "prettier": "^3.3.3",
-    "prettier-plugin-tailwindcss": "^0.6.6",
     "rollup-plugin-visualizer": "^5.12.0",
-    "standard-version": "^9.5.0",
     "tailwindcss": "^3.4.12",
     "typescript": "5.6.2",
     "vite": "^5.4.6",
@@ -63,10 +69,5 @@
     "vite-plugin-pwa": "^0.20.5",
     "vite-tsconfig-paths": "^5.0.1",
     "vitest": "^2.1.1"
-  },
-  "engines": {
-    "node": ">=20.14.x",
-    "pnpm": ">=9"
-  },
-  "packageManager": "pnpm@9.1.1"
+  }
 }

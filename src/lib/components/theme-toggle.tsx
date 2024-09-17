@@ -12,8 +12,8 @@ export function ThemeToggle() {
       toggled={theme === 'light'}
       placeholder=""
       className="text-3xl"
-      onPointerEnterCapture={() => {}}
-      onPointerLeaveCapture={() => {}}
+      onPointerEnterCapture={undefined}
+      onPointerLeaveCapture={undefined}
     />
   );
 }

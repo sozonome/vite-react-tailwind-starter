@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet';
 
 const APP_NAME = 'vite-react-tailwind-starter';
 
-const Meta = () => {
+export const Meta = () => {
   return (
     <Helmet>
       <title>Vite React Tailwind Starter</title>
@@ -20,5 +20,3 @@ const Meta = () => {
     </Helmet>
   );
 };
-
-export default Meta;

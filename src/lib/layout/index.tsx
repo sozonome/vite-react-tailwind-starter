@@ -2,15 +2,15 @@ import type { ReactNode } from 'react';
 
 import { ThemeProvider } from '@/lib/components/theme-provider';
 
-import Footer from './components/footer';
-import Header from './components/header';
-import Meta from './components/meta';
+import { Footer } from './components/footer';
+import { Header } from './components/header';
+import { Meta } from './components/meta';
 
 type LayoutProps = {
   children: ReactNode;
 };
 
-const Layout = ({ children }: LayoutProps) => {
+export const Layout = ({ children }: LayoutProps) => {
   return (
     <ThemeProvider>
       <Meta />
@@ -22,5 +22,3 @@ const Layout = ({ children }: LayoutProps) => {
     </ThemeProvider>
   );
 };
-
-export default Layout;

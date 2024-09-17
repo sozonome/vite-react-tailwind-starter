@@ -41,7 +41,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
 
   const providerValue = React.useMemo(
     () => ({ theme, toggleTheme }),
-    [theme, toggleTheme]
+    [theme, toggleTheme],
   );
 
   return (
