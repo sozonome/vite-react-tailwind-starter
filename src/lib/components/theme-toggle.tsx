@@ -1,14 +1,13 @@
 import { Classic } from '@theme-toggles/react';
 import '@theme-toggles/react/css/Classic.css';
-
-import { useTheme } from '@/lib/components/theme-provider';
+import { useTheme } from 'next-themes';
 
 export function ThemeToggle() {
-  const { toggleTheme, theme } = useTheme();
+  const { setTheme, theme } = useTheme();
 
   return (
     <Classic
-      toggle={toggleTheme}
+      toggle={(light) => setTheme(light ? 'light' : 'dark')}
       toggled={theme === 'light'}
       placeholder=""
       className="text-3xl"

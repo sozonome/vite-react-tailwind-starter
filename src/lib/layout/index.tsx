@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react';
 
-import { ThemeProvider } from '@/lib/components/theme-provider';
-
+import { ThemeProvider } from 'next-themes';
 import { Footer } from './components/footer';
 import { Header } from './components/header';
 import { Meta } from './components/meta';
@@ -12,7 +11,7 @@ type LayoutProps = {
 
 export const Layout = ({ children }: LayoutProps) => {
   return (
-    <ThemeProvider>
+    <ThemeProvider attribute="class">
       <Meta />
       <div className="flex min-h-screen flex-col dark:bg-black dark:text-white">
         <Header />
