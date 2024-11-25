@@ -3,7 +3,7 @@
 This is a project bootstrapped with [`@vitejs/app`](https://vitejs.dev/guide/#scaffolding-your-first-vite-project) (`react-ts`), added with [TailwindCSS](https://tailwindcss.com) and [TypeScript](https://www.typescriptlang.org) setup.
 
 - ⚡ blazing fast dev server and build
-- 🔗 route management added (`react-router` v7 - Framework configuration)
+- 🔗 route management added (`react-router` v7 - Framework configuration - SPA mode)
 
 [**Live Demo**](https://vite-react-tailwind-starter.sznm.dev/)
 

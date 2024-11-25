@@ -43,7 +43,7 @@ export default defineConfig({
     VitePWA(pwaOptions),
   ],
   ssr: {
-    noExternal: ['react-helmet-async'], // temporary
+    noExternal: ['react-helmet-async', '@theme-toggles/react'], // temporary
   },
   server: {
     open: true,
