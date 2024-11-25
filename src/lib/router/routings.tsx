@@ -9,7 +9,7 @@
  */
 
 import { Suspense } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router';
 
 import Page404 from '@/lib/pages/404';
 

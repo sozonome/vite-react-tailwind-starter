@@ -8,7 +8,7 @@ export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     fontFamily: {
-      sans: ['"Plus Jakarta Sans"', ...fontFamily.sans],
+      sans: ['"Plus Jakarta Sans Variable"', ...fontFamily.sans],
     },
   },
   plugins: [tailwindTypography],

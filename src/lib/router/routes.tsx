@@ -1,5 +1,5 @@
 import React from 'react';
-import type { PathRouteProps } from 'react-router-dom';
+import type { PathRouteProps } from 'react-router';
 
 const Home = React.lazy(() => import('@/lib/pages/home'));
 
