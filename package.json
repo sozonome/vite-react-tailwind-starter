@@ -2,7 +2,7 @@
   "name": "vite-react-tailwind-starter",
   "version": "0.1.0",
   "private": true,
-  "author": "sozonome",
+  "author": "agustinusnathaniel",
   "type": "module",
   "engines": {
     "node": ">=20.14.x",

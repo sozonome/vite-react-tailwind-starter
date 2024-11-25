@@ -1,4 +1,4 @@
-const repoName = 'sozonome/vite-react-tailwind-starter';
+const repoName = 'agustinusnathaniel/vite-react-tailwind-starter';
 
 export const CTASection = () => {
   return (
