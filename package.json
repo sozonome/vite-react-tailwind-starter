@@ -5,10 +5,10 @@
   "author": "agustinusnathaniel",
   "type": "module",
   "engines": {
-    "node": ">=20.14.x",
+    "node": ">=22.11.x",
     "pnpm": ">=9"
   },
-  "packageManager": "pnpm@9.1.1",
+  "packageManager": "pnpm@9.13.2",
   "scripts": {
     "dev": "react-router dev",
     "build": "react-router build",
